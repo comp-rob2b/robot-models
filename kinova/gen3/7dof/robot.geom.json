@@ -1,0 +1,745 @@
+{
+    "@context": [
+        "https://comp-rob2b.github.io/metamodels/geometry/structural-entities.json",
+        "https://comp-rob2b.github.io/metamodels/geometry/coordinates.json",
+        "https://comp-rob2b.github.io/metamodels/geometry/spatial-relations.json",
+        "https://comp-rob2b.github.io/metamodels/qudt.json",
+        {
+            "rob": "https://comp-rob2b.github.io/robots/kinova/gen3/7dof/"
+        }
+    ],
+    "@id": "rob:geometry",
+    "@graph": [
+        {
+            "@id": "rob:link0-root-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link0-root",
+            "@type": [ "3D", "Frame", "Orthogonal", "UnitLength", "RightHanded" ],
+            "origin": "rob:link0-root-origin"
+        },
+        {
+            "@id": "rob:link0-com",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link0-joint1-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link0-joint1-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link0-joint1-origin"
+        },
+        {
+            "@id": "rob:link0-joint1",
+            "@type": "Frame",
+            "origin": "rob:link0-joint1-origin",
+            "vector-z": "rob:link0-joint1-vector-z"
+        },
+
+
+        {
+            "@id": "rob:link1-root-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link1-root-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link1-root-origin"
+        },
+        {
+            "@id": "rob:link1-root",
+            "@type": "Frame",
+            "origin": "rob:link1-root-origin",
+            "vector-z": "rob:link1-root-vector-z"
+        },
+        {
+            "@id": "rob:link1-com",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link1-joint2-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link1-joint2-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link1-joint2-origin"
+        },
+        {
+            "@id": "rob:link1-joint2",
+            "@type": "Frame",
+            "origin": "rob:link1-joint2-origin",
+            "vector-z": "rob:link1-joint2-vector-z"
+        },
+
+        {
+            "@id": "rob:link2-root-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link2-root-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link2-root-origin"
+        },
+        {
+            "@id": "rob:link2-root",
+            "@type": "Frame",
+            "origin": "rob:link2-root-origin",
+            "vector-z": "rob:link2-root-vector-z"
+        },
+        {
+            "@id": "rob:link2-com",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link2-joint3-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link2-joint3-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link2-joint3-origin"
+        },
+        {
+            "@id": "rob:link2-joint3",
+            "@type": "Frame",
+            "origin": "rob:link2-joint3-origin",
+            "vector-z": "rob:link2-joint3-vector-z"
+        },
+
+        {
+            "@id": "rob:link3-root-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link3-root-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link3-root-origin"
+        },
+        {
+            "@id": "rob:link3-root",
+            "@type": "Frame",
+            "origin": "rob:link3-root-origin",
+            "vector-z": "rob:link3-root-vector-z"
+        },
+        {
+            "@id": "rob:link3-com",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link3-joint4-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link3-joint4-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link3-joint4-origin"
+        },
+        {
+            "@id": "rob:link3-joint4",
+            "@type": "Frame",
+            "origin": "rob:link3-joint4-origin",
+            "vector-z": "rob:link3-joint4-vector-z"
+        },
+
+        {
+            "@id": "rob:link4-root-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link4-root-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link4-root-origin"
+        },
+        {
+            "@id": "rob:link4-root",
+            "@type": "Frame",
+            "origin": "rob:link4-root-origin",
+            "vector-z": "rob:link4-root-vector-z"
+        },
+        {
+            "@id": "rob:link4-com",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link4-joint5-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link4-joint5-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link4-joint5-origin"
+        },
+        {
+            "@id": "rob:link4-joint5",
+            "@type": "Frame",
+            "origin": "rob:link4-joint5-origin",
+            "vector-z": "rob:link4-joint5-vector-z"
+        },
+
+        {
+            "@id": "rob:link5-root-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link5-root-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link5-root-origin",
+            "vector-z": "rob:link5-root-vector-z"
+        },
+        {
+            "@id": "rob:link5-root",
+            "@type": "Frame",
+            "origin": "rob:link5-root-origin"
+        },
+        {
+            "@id": "rob:link5-com",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link5-joint6-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link5-joint6-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link5-joint6-origin"
+        },
+        {
+            "@id": "rob:link5-joint6",
+            "@type": "Frame",
+            "origin": "rob:link5-joint6-origin",
+            "vector-z": "rob:link5-joint6-vector-z"
+        },
+
+        {
+            "@id": "rob:link6-root-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link6-root-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link6-root-origin",
+            "vector-z": "rob:link6-root-vector-z"
+        },
+        {
+            "@id": "rob:link6-root",
+            "@type": "Frame",
+            "origin": "rob:link6-root-origin"
+        },
+        {
+            "@id": "rob:link6-com",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link6-joint7-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link6-joint7-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link6-joint7-origin"
+        },
+        {
+            "@id": "rob:link6-joint7",
+            "@type": "Frame",
+            "origin": "rob:link6-joint7-origin",
+            "vector-z": "rob:link6-joint7-vector-z"
+        },
+
+        {
+            "@id": "rob:link7-root-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:link7-root-vector-z",
+            "@type": [ "3D", "Euclidean", "Vector", "BoundVector", "UnitLength" ],
+            "start": "rob:link7-root-origin"
+        },
+        {
+            "@id": "rob:link7-root",
+            "@type": "Frame",
+            "origin": "rob:link7-root-origin",
+            "vector-z": "rob:link7-root-vector-z"
+        },
+        {
+            "@id": "rob:link7-com",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+
+
+        {
+            "@id": "rob:position-link0-com-wrt-link0-root-origin",
+            "@type": "Position",
+            "of": "rob:link0-com",
+            "with-respect-to": "rob:link0-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:position-coord-link0-com-wrt-link0-root-origin",
+            "@type": [ "PositionReference", "PositionCoordinate", "VectorXYZ" ],
+            "of-position": "rob:position-link0-com-wrt-link0-root-origin",
+            "as-seen-by": "rob:link0-root",
+            "unit": "M",
+            "x": -0.000648,
+            "y": -0.000166,
+            "z":  0.084487
+        },
+        {
+            "@id": "rob:orientation-link0-joint1-wrt-link0-root",
+            "@type": "Orientation",
+            "of": "rob:link0-joint1",
+            "with-respect-to": "rob:link0-root",
+            "quantity-kind": "Angle"
+        },
+        {
+            "@id": "rob:position-link0-joint1-origin-wrt-link0-root-origin",
+            "@type": "Position",
+            "of": "rob:link0-joint1-origin",
+            "with-respect-to": "rob:link0-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:pose-link0-joint1-wrt-link0-root",
+            "@type": "Pose",
+            "of": "rob:link0-joint1",
+            "with-respect-to": "rob:link0-root",
+            "quantity-kind": [ "Angle", "Length" ]
+        },
+        {
+            "@id": "rob:pose-coord-link0-joint1-wrt-link0-root",
+            "@type": [ "PoseReference", "PoseCoordinate", "DirectionCosineXYZ", "VectorXYZ" ],
+            "of-pose": "rob:pose-link0-joint1-wrt-link0-root",
+            "as-seen-by": "rob:link0-root",
+            "unit": [ "UNITLESS", "M" ],
+            "direction-cosine-x": [1.0,  0.0,  0.0],
+            "direction-cosine-y": [0.0, -1.0,  0.0],
+            "direction-cosine-z": [0.0,  0.0, -1.0],
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.1564
+        },
+
+        {
+            "@id": "rob:position-link1-com-wrt-link1-root-origin",
+            "@type": "Position",
+            "of": "rob:link1-com",
+            "with-respect-to": "rob:link1-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:position-coord-link1-com-wrt-link1-root-origin",
+            "@type": [ "PositionReference", "PositionCoordinate", "VectorXYZ" ],
+            "of-position": "rob:position-link1-com-wrt-link1-root-origin",
+            "as-seen-by": "rob:link1-root",
+            "unit": "M",
+            "x": -0.000023,
+            "y": -0.010364,
+            "z": -0.073360
+        },
+        {
+            "@id": "rob:orientation-link1-joint2-wrt-link1-root",
+            "@type": "Orientation",
+            "of": "rob:link1-joint2",
+            "with-respect-to": "rob:link1-root",
+            "quantity-kind": "Angle"
+        },
+        {
+            "@id": "rob:position-link1-joint2-origin-wrt-link1-root-origin",
+            "@type": "Position",
+            "of": "rob:link1-joint2-origin",
+            "with-respect-to": "rob:link1-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:pose-link1-joint2-wrt-link1-root",
+            "@type": "Pose",
+            "of": "rob:link1-joint2",
+            "with-respect-to": "rob:link1-root",
+            "quantity-kind": [ "Angle", "Length" ]
+        },
+        {
+            "@id": "rob:pose-coord-link1-joint2-wrt-link1-root",
+            "@type": [ "PoseReference", "PoseCoordinate", "DirectionCosineXYZ", "VectorXYZ" ],
+            "of-pose": "rob:pose-link1-joint2-wrt-link1-root",
+            "as-seen-by": "rob:link1-root",
+            "unit": [ "UNITLESS", "M" ],
+            "direction-cosine-x": [1.0,  0.0, 0.0],
+            "direction-cosine-y": [0.0,  0.0, 1.0],
+            "direction-cosine-z": [0.0, -1.0, 0.0],
+            "x":  0.0,
+            "y":  0.0054,
+            "z": -0.1284
+        },
+
+        {
+            "@id": "rob:position-link2-com-wrt-link2-root-origin",
+            "@type": "Position",
+            "of": "rob:link2-com",
+            "with-respect-to": "rob:link2-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:position-coord-link2-com-wrt-link2-root-origin",
+            "@type": [ "PositionReference", "PositionCoordinate", "VectorXYZ" ],
+            "of-position": "rob:position-link2-com-wrt-link2-root-origin",
+            "as-seen-by": "rob:link2-root",
+            "unit": "M",
+            "x": -0.000044,
+            "y": -0.099580,
+            "z": -0.013278
+        },
+        {
+            "@id": "rob:orientation-link2-joint3-wrt-link2-root",
+            "@type": "Orientation",
+            "of": "rob:link2-joint3",
+            "with-respect-to": "rob:link2-root",
+            "quantity-kind": "Angle"
+        },
+        {
+            "@id": "rob:position-link2-joint3-origin-wrt-link2-root-origin",
+            "@type": "Position",
+            "of": "rob:link2-joint3-origin",
+            "with-respect-to": "rob:link2-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:pose-link2-joint3-wrt-link2-root",
+            "@type": "Pose",
+            "of": "rob:link2-joint3",
+            "with-respect-to": "rob:link2-root",
+            "quantity-kind": [ "Angle", "Length" ]
+        },
+        {
+            "@id": "rob:pose-coord-link2-joint3-wrt-link2-root",
+            "@type": [ "PoseReference", "PoseCoordinate", "DirectionCosineXYZ", "VectorXYZ" ],
+            "of-pose": "rob:pose-link2-joint3-wrt-link2-root",
+            "as-seen-by": "rob:link2-root",
+            "unit": [ "UNITLESS", "M" ],
+            "direction-cosine-x": [1.0, 0.0,  0.0],
+            "direction-cosine-y": [0.0, 0.0, -1.0],
+            "direction-cosine-z": [0.0, 1.0,  0.0],
+            "x":  0.0,
+            "y": -0.2104,
+            "z": -0.0064
+        },
+
+        {
+            "@id": "rob:position-link3-com-wrt-link3-root-origin",
+            "@type": "Position",
+            "of": "rob:link3-com",
+            "with-respect-to": "rob:link3-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:position-coord-link3-com-wrt-link3-root-origin",
+            "@type": [ "PositionReference", "PositionCoordinate", "VectorXYZ" ],
+            "of-position": "rob:position-link3-com-wrt-link3-root-origin",
+            "as-seen-by": "rob:link3-root",
+            "unit": "M",
+            "x": -0.000044,
+            "y": -0.006641,
+            "z": -0.117892
+        },
+        {
+            "@id": "rob:orientation-link3-joint4-wrt-link3-root",
+            "@type": "Orientation",
+            "of": "rob:link3-joint4",
+            "with-respect-to": "rob:link3-root",
+            "quantity-kind": "Angle"
+        },
+        {
+            "@id": "rob:position-link3-joint4-origin-wrt-link3-root-origin",
+            "@type": "Position",
+            "of": "rob:link3-joint4-origin",
+            "with-respect-to": "rob:link3-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:pose-link3-joint4-wrt-link3-root",
+            "@type": "Pose",
+            "of": "rob:link3-joint4",
+            "with-respect-to": "rob:link3-root",
+            "quantity-kind": [ "Angle", "Length" ]
+        },
+        {
+            "@id": "rob:pose-coord-link3-joint4-wrt-link3-root",
+            "@type": [ "PoseReference", "PoseCoordinate", "DirectionCosineXYZ", "VectorXYZ" ],
+            "of-pose": "rob:pose-link3-joint4-wrt-link3-root",
+            "as-seen-by": "rob:link3-root",
+            "unit": [ "UNITLESS", "M" ],
+            "direction-cosine-x": [1.0,  0.0, 0.0],
+            "direction-cosine-y": [0.0,  0.0, 1.0],
+            "direction-cosine-z": [0.0, -1.0, 0.0],
+            "x":  0.0,
+            "y":  0.0064,
+            "z": -0.2104
+        },
+
+        {
+            "@id": "rob:position-link4-com-wrt-link4-root-origin",
+            "@type": "Position",
+            "of": "rob:link4-com",
+            "with-respect-to": "rob:link4-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:position-coord-link4-com-wrt-link4-root-origin",
+            "@type": [ "PositionReference", "PositionCoordinate", "VectorXYZ" ],
+            "of-position": "rob:position-link4-com-wrt-link4-root-origin",
+            "as-seen-by": "rob:link4-root",
+            "unit": "M",
+            "x": -0.000018,
+            "y": -0.075478,
+            "z": -0.015006
+        },
+        {
+            "@id": "rob:orientation-link4-joint5-wrt-link4-root",
+            "@type": "Orientation",
+            "of": "rob:link4-joint5",
+            "with-respect-to": "rob:link4-root",
+            "quantity-kind": "Angle"
+        },
+        {
+            "@id": "rob:position-link4-joint5-origin-wrt-link4-root-origin",
+            "@type": "Position",
+            "of": "rob:link4-joint5-origin",
+            "with-respect-to": "rob:link4-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:pose-link4-joint5-wrt-link4-root",
+            "@type": "Pose",
+            "of": "rob:link4-joint5",
+            "with-respect-to": "rob:link4-root",
+            "quantity-kind": [ "Angle", "Length" ]
+        },
+        {
+            "@id": "rob:pose-coord-link4-joint5-wrt-link4-root",
+            "@type": [ "PoseReference", "PoseCoordinate", "DirectionCosineXYZ", "VectorXYZ" ],
+            "of-pose": "rob:pose-link4-joint5-wrt-link4-root",
+            "as-seen-by": "rob:link4-root",
+            "unit": [ "UNITLESS", "M" ],
+            "direction-cosine-x": [1.0, 0.0,  0.0],
+            "direction-cosine-y": [0.0, 0.0, -1.0],
+            "direction-cosine-z": [0.0, 1.0,  0.0],
+            "x":  0.0,
+            "y": -0.2084,
+            "z": -0.0064
+        },
+
+        {
+            "@id": "rob:position-link5-com-wrt-link5-root-origin",
+            "@type": "Position",
+            "of": "rob:link5-com",
+            "with-respect-to": "rob:link5-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:position-coord-link5-com-wrt-link5-root-origin",
+            "@type": [ "PositionReference", "PositionCoordinate", "VectorXYZ" ],
+            "of-position": "rob:position-link5-com-wrt-link5-root-origin",
+            "as-seen-by": "rob:link5-root",
+            "unit": "M",
+            "x":  0.000001,
+            "y": -0.009432,
+            "z": -0.063883
+        },
+        {
+            "@id": "rob:orientation-link5-joint6-wrt-link5-root",
+            "@type": "Orientation",
+            "of": "rob:link5-joint6",
+            "with-respect-to": "rob:link5-root",
+            "quantity-kind": "Angle"
+        },
+        {
+            "@id": "rob:position-link5-joint6-origin-wrt-link5-root-origin",
+            "@type": "Position",
+            "of": "rob:link5-joint6-origin",
+            "with-respect-to": "rob:link5-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:pose-link5-joint6-wrt-link5-root",
+            "@type": "Pose",
+            "of": "rob:link5-joint6",
+            "with-respect-to": "rob:link5-root",
+            "quantity-kind": [ "Angle", "Length" ]
+        },
+        {
+            "@id": "rob:pose-coord-link5-joint6-wrt-link5-root",
+            "@type": [ "PoseReference", "PoseCoordinate", "DirectionCosineXYZ", "VectorXYZ" ],
+            "of-pose": "rob:pose-link5-joint6-wrt-link5-root",
+            "as-seen-by": "rob:link5-root",
+            "unit": [ "UNITLESS", "M" ],
+            "direction-cosine-x": [1.0,  0.0, 0.0],
+            "direction-cosine-y": [0.0,  0.0, 1.0],
+            "direction-cosine-z": [0.0, -1.0, 0.0],
+            "x":  0.0,
+            "y":  0.0,
+            "z": -0.1059
+        },
+
+        {
+            "@id": "rob:position-link6-com-wrt-link6-root-origin",
+            "@type": "Position",
+            "of": "rob:link6-com",
+            "with-respect-to": "rob:link6-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:position-coord-link6-com-wrt-link6-root-origin",
+            "@type": [ "PositionReference", "PositionCoordinate", "VectorXYZ" ],
+            "of-position": "rob:position-link6-com-wrt-link6-root-origin",
+            "as-seen-by": "rob:link6-root",
+            "unit": "M",
+            "x":  0.000001,
+            "y": -0.045483,
+            "z": -0.009650
+        },
+        {
+            "@id": "rob:orientation-link6-joint7-wrt-link6-root",
+            "@type": "Orientation",
+            "of": "rob:link6-joint7",
+            "with-respect-to": "rob:link6-root",
+            "quantity-kind": "Angle"
+        },
+        {
+            "@id": "rob:position-link6-joint7-origin-wrt-link6-root-origin",
+            "@type": "Position",
+            "of": "rob:link6-joint7-origin",
+            "with-respect-to": "rob:link6-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:pose-link6-joint7-wrt-link6-root",
+            "@type": "Pose",
+            "of": "rob:link6-joint7",
+            "with-respect-to": "rob:link6-root",
+            "quantity-kind": [ "Angle", "Length" ]
+        },
+        {
+            "@id": "rob:pose-coord-link6-joint7-wrt-link6-root",
+            "@type": [ "PoseReference", "PoseCoordinate", "DirectionCosineXYZ", "VectorXYZ" ],
+            "of-pose": "rob:pose-link6-joint7-wrt-link6-root",
+            "as-seen-by": "rob:link6-root",
+            "unit": [ "UNITLESS", "M" ],
+            "direction-cosine-x": [1.0, 0.0,  0.0],
+            "direction-cosine-y": [0.0, 0.0, -1.0],
+            "direction-cosine-z": [0.0, 1.0,  0.0],
+            "x":  0.0,
+            "y": -0.1059,
+            "z":  0.0
+        },
+
+        {
+            "@id": "rob:position-link7-com-wrt-link7-root-origin",
+            "@type": "Position",
+            "of": "rob:link7-com",
+            "with-respect-to": "rob:link7-root-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:position-coord-link7-com-wrt-link7-root-origin",
+            "@type": [ "PositionReference", "PositionCoordinate", "VectorXYZ" ],
+            "of-position": "rob:position-link7-com-wrt-link7-root-origin",
+            "as-seen-by": "rob:link7-root",
+            "unit": "M",
+            "x": -0.000281,
+            "y": -0.011402,
+            "z": -0.029798
+        },
+
+
+
+        {
+            "@id": "rob:link0",
+            "@type": [ "SimplicialComplex", "RigidBody" ],
+            "simplices": [
+                "rob:link0-root-origin",
+                "rob:link0-root",
+                "rob:link0-com",
+                "rob:link0-joint1-origin",
+                "rob:link0-joint1"
+            ]
+        },
+        {
+            "@id": "rob:link1",
+            "@type": [ "SimplicialComplex", "RigidBody" ],
+            "simplices": [
+                "rob:link1-root-origin",
+                "rob:link1-root",
+                "rob:link1-com",
+                "rob:link1-joint2-origin",
+                "rob:link1-joint2"
+            ]
+        },
+        {
+            "@id": "rob:link2",
+            "@type": [ "SimplicialComplex", "RigidBody" ],
+            "simplices": [
+                "rob:link2-root-origin",
+                "rob:link2-root",
+                "rob:link2-com",
+                "rob:link2-joint3-origin",
+                "rob:link2-joint3"
+            ]
+        },
+        {
+            "@id": "rob:link3",
+            "@type": [ "SimplicialComplex", "RigidBody" ],
+            "simplices": [
+                "rob:link3-root-origin",
+                "rob:link3-root",
+                "rob:link3-com",
+                "rob:link3-joint4-origin",
+                "rob:link3-joint4"
+            ]
+        },
+        {
+            "@id": "rob:link4",
+            "@type": [ "SimplicialComplex", "RigidBody" ],
+            "simplices": [
+                "rob:link4-root-origin",
+                "rob:link4-root",
+                "rob:link4-com",
+                "rob:link4-joint5-origin",
+                "rob:link4-joint5"
+            ]
+        },
+        {
+            "@id": "rob:link5",
+            "@type": [ "SimplicialComplex", "RigidBody" ],
+            "simplices": [
+                "rob:link5-root-origin",
+                "rob:link5-root",
+                "rob:link5-com",
+                "rob:link5-joint6-origin",
+                "rob:link5-joint6"
+            ]
+        },
+        {
+            "@id": "rob:link6",
+            "@type": [ "SimplicialComplex", "RigidBody" ],
+            "simplices": [
+                "rob:link6-root-origin",
+                "rob:link6-root",
+                "rob:link6-com",
+                "rob:link6-joint7-origin",
+                "rob:link6-joint7"
+            ]
+        },
+        {
+            "@id": "rob:link7",
+            "@type": [ "SimplicialComplex", "RigidBody" ],
+            "simplices": [
+                "rob:link7-root-origin",
+                "rob:link7-root",
+                "rob:link7-com"
+            ]
+        }
+    ]
+}

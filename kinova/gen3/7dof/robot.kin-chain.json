@@ -1,0 +1,403 @@
+
+{
+    "@context": [
+        "https://comp-rob2b.github.io/metamodels/geometry/structural-entities.json",
+        "https://comp-rob2b.github.io/metamodels/geometry/spatial-relations.json",
+        "https://comp-rob2b.github.io/metamodels/kinematic-chain/structural-entities.json",
+        "https://comp-rob2b.github.io/metamodels/kinematic-chain/state.json",
+        "https://comp-rob2b.github.io/metamodels/qudt.json",
+        {
+            "rob": "https://comp-rob2b.github.io/robots/kinova/gen3/7dof/"
+        }
+    ],
+    "@id": "rob:chain",
+    "@graph": [
+        {
+            "@id": "rob:joint1",
+            "@type": [ "Joint", "RevoluteJoint", "RevoluteJointWithOrientedAxisOfRotation" ],
+            "between-attachments": [ "rob:link0-joint1", "rob:link1-root" ],
+            "common-axis": "rob:joint1-common-axis",
+            "origin-offset": "rob:joint1-offset",
+            "polarity": "PositivePolarity"
+        },
+        {
+            "@id": "rob:joint2",
+            "@type": [ "Joint", "RevoluteJoint", "RevoluteJointWithOrientedAxisOfRotation" ],
+            "between-attachments": [ "rob:link1-joint2", "rob:link2-root" ],
+            "common-axis": "rob:joint2-common-axis",
+            "origin-offset": "rob:joint2-offset",
+            "polarity": "PositivePolarity"
+        },
+        {
+            "@id": "rob:joint3",
+            "@type": [ "Joint", "RevoluteJoint", "RevoluteJointWithOrientedAxisOfRotation" ],
+            "between-attachments": [ "rob:link2-joint3", "rob:link3-root" ],
+            "common-axis": "rob:joint3-common-axis",
+            "origin-offset": "rob:joint3-offset",
+            "polarity": "PositivePolarity"
+        },
+        {
+            "@id": "rob:joint4",
+            "@type": [ "Joint", "RevoluteJoint", "RevoluteJointWithOrientedAxisOfRotation" ],
+            "between-attachments": [ "rob:link3-joint4", "rob:link4-root" ],
+            "common-axis": "rob:joint4-common-axis",
+            "origin-offset": "rob:joint4-offset",
+            "polarity": "PositivePolarity"
+        },
+        {
+            "@id": "rob:joint5",
+            "@type": [ "Joint", "RevoluteJoint", "RevoluteJointWithOrientedAxisOfRotation" ],
+            "between-attachments": [ "rob:link4-joint5", "rob:link5-root" ],
+            "common-axis": "rob:joint5-common-axis",
+            "origin-offset": "rob:joint5-offset",
+            "polarity": "PositivePolarity"
+        },
+        {
+            "@id": "rob:joint6",
+            "@type": [ "Joint", "RevoluteJoint", "RevoluteJointWithOrientedAxisOfRotation" ],
+            "between-attachments": [ "rob:link5-joint6", "rob:link6-root" ],
+            "common-axis": "rob:joint6-common-axis",
+            "origin-offset": "rob:joint6-offset",
+            "polarity": "PositivePolarity"
+        },
+        {
+            "@id": "rob:joint7",
+            "@type": [ "Joint", "RevoluteJoint", "RevoluteJointWithOrientedAxisOfRotation" ],
+            "between-attachments": [ "rob:link6-joint7", "rob:link7-root" ],
+            "common-axis": "rob:joint7-common-axis",
+            "origin-offset": "rob:joint7-offset",
+            "polarity": "PositivePolarity"
+        },
+
+        {
+            "@id": "rob:joint1-offset",
+            "@type": "Position",
+            "of": "rob:link1-root-origin",
+            "with-respect-to": "rob:link0-joint1-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:joint1-common-axis",
+            "@type": "LineCollinearity",
+            "lines": [ "rob:link0-joint1-vector-z", "rob:link1-root-vector-z" ]
+        },
+        {
+            "@id": "rob:joint2-offset",
+            "@type": "Position",
+            "of": "rob:link2-root-origin",
+            "with-respect-to": "rob:link1-joint2-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:joint2-common-axis",
+            "@type": "LineCollinearity",
+            "lines": [ "rob:link1-joint2-vector-z", "rob:link2-root-vector-z" ]
+        },
+        {
+            "@id": "rob:joint3-offset",
+            "@type": "Position",
+            "of": "rob:link3-root-origin",
+            "with-respect-to": "rob:link2-joint3-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:joint3-common-axis",
+            "@type": "LineCollinearity",
+            "lines": [ "rob:link2-joint3-vector-z", "rob:link3-root-vector-z" ]
+        },
+        {
+            "@id": "rob:joint4-offset",
+            "@type": "Position",
+            "of": "rob:link4-root-origin",
+            "with-respect-to": "rob:link3-joint4-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:joint4-common-axis",
+            "@type": "LineCollinearity",
+            "lines": [ "rob:link3-joint4-vector-z", "rob:link4-root-vector-z" ]
+        },
+        {
+            "@id": "rob:joint5-offset",
+            "@type": "Position",
+            "of": "rob:link5-root-origin",
+            "with-respect-to": "rob:link4-joint5-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:joint5-common-axis",
+            "@type": "LineCollinearity",
+            "lines": [ "rob:link4-joint5-vector-z", "rob:link5-root-vector-z" ]
+        },
+        {
+            "@id": "rob:joint6-offset",
+            "@type": "Position",
+            "of": "rob:link6-root-origin",
+            "with-respect-to": "rob:link5-joint6-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:joint6-common-axis",
+            "@type": "LineCollinearity",
+            "lines": [ "rob:link5-joint6-vector-z", "rob:link6-root-vector-z" ]
+        },
+        {
+            "@id": "rob:joint7-offset",
+            "@type": "Position",
+            "of": "rob:link7-root-origin",
+            "with-respect-to": "rob:link6-joint7-origin",
+            "quantity-kind": "Length"
+        },
+        {
+            "@id": "rob:joint7-common-axis",
+            "@type": "LineCollinearity",
+            "lines": [ "rob:link6-joint7-vector-z", "rob:link7-root-vector-z" ]
+        },
+
+        {
+            "@id": "rob:q1",
+            "@type": [ "JointReference", "JointPosition", "JointPositionCoordinate" ],
+            "of-joint": "rob:joint1",
+            "quantity-kind": "Angle",
+            "unit": "RAD",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qd1",
+            "@type": [ "JointReference", "JointVelocity", "JointVelocityCoordinate" ],
+            "of-joint": "rob:joint1",
+            "quantity-kind": "AngularVelocity",
+            "unit": "RAD-PER-SEC",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qdd1",
+            "@type": [ "JointReference", "JointAcceleration", "JointAccelerationCoordinate" ],
+            "of-joint": "rob:joint1",
+            "quantity-kind": "AngularAcceleration",
+            "unit": "RAD-PER-SEC2",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:tau1",
+            "@type": [ "JointReference", "JointForce", "JointForceCoordinate" ],
+            "of-joint": "rob:joint1",
+            "quantity-kind": "Torque",
+            "unit": "N-M",
+            "number-of-elements": 1,
+            "value": 0.0
+        },
+        {
+            "@id": "rob:q2",
+            "@type": [ "JointReference", "JointPosition", "JointPositionCoordinate" ],
+            "of-joint": "rob:joint2",
+            "quantity-kind": "Angle",
+            "unit": "RAD",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qd2",
+            "@type": [ "JointReference", "JointVelocity", "JointVelocityCoordinate" ],
+            "of-joint": "rob:joint2",
+            "quantity-kind": "AngularVelocity",
+            "unit": "RAD-PER-SEC",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qdd2",
+            "@type": [ "JointReference", "JointAcceleration", "JointAccelerationCoordinate" ],
+            "of-joint": "rob:joint2",
+            "quantity-kind": "AngularAcceleration",
+            "unit": "RAD-PER-SEC2",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:tau2",
+            "@type": [ "JointReference", "JointForce", "JointForceCoordinate" ],
+            "of-joint": "rob:joint2",
+            "quantity-kind": "Torque",
+            "unit": "N-M",
+            "number-of-elements": 1,
+            "value": 0.0
+        },
+        {
+            "@id": "rob:q3",
+            "@type": [ "JointReference", "JointPosition", "JointPositionCoordinate" ],
+            "of-joint": "rob:joint3",
+            "quantity-kind": "Angle",
+            "unit": "RAD",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qd3",
+            "@type": [ "JointReference", "JointVelocity", "JointVelocityCoordinate" ],
+            "of-joint": "rob:joint3",
+            "quantity-kind": "AngularVelocity",
+            "unit": "RAD-PER-SEC",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qdd3",
+            "@type": [ "JointReference", "JointAcceleration", "JointAccelerationCoordinate" ],
+            "of-joint": "rob:joint3",
+            "quantity-kind": "AngularAcceleration",
+            "unit": "RAD-PER-SEC2",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:tau3",
+            "@type": [ "JointReference", "JointForce", "JointForceCoordinate" ],
+            "of-joint": "rob:joint3",
+            "quantity-kind": "Torque",
+            "unit": "N-M",
+            "number-of-elements": 1,
+            "value": 0.0
+        },
+        {
+            "@id": "rob:q4",
+            "@type": [ "JointReference", "JointPosition", "JointPositionCoordinate" ],
+            "of-joint": "rob:joint4",
+            "quantity-kind": "Angle",
+            "unit": "RAD",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qd4",
+            "@type": [ "JointReference", "JointVelocity", "JointVelocityCoordinate" ],
+            "of-joint": "rob:joint4",
+            "quantity-kind": "AngularVelocity",
+            "unit": "RAD-PER-SEC",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qdd4",
+            "@type": [ "JointReference", "JointAcceleration", "JointAccelerationCoordinate" ],
+            "of-joint": "rob:joint4",
+            "quantity-kind": "AngularAcceleration",
+            "unit": "RAD-PER-SEC2",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:tau4",
+            "@type": [ "JointReference", "JointForce", "JointForceCoordinate" ],
+            "of-joint": "rob:joint4",
+            "quantity-kind": "Torque",
+            "unit": "N-M",
+            "number-of-elements": 1,
+            "value": 0.0
+        },
+        {
+            "@id": "rob:q5",
+            "@type": [ "JointReference", "JointPosition", "JointPositionCoordinate" ],
+            "of-joint": "rob:joint5",
+            "quantity-kind": "Angle",
+            "unit": "RAD",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qd5",
+            "@type": [ "JointReference", "JointVelocity", "JointVelocityCoordinate" ],
+            "of-joint": "rob:joint5",
+            "quantity-kind": "AngularVelocity",
+            "unit": "RAD-PER-SEC",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qdd5",
+            "@type": [ "JointReference", "JointAcceleration", "JointAccelerationCoordinate" ],
+            "of-joint": "rob:joint5",
+            "quantity-kind": "AngularAcceleration",
+            "unit": "RAD-PER-SEC2",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:tau5",
+            "@type": [ "JointReference", "JointForce", "JointForceCoordinate" ],
+            "of-joint": "rob:joint5",
+            "quantity-kind": "Torque",
+            "unit": "N-M",
+            "number-of-elements": 1,
+            "value": 0.0
+        },
+        {
+            "@id": "rob:q6",
+            "@type": [ "JointReference", "JointPosition", "JointPositionCoordinate" ],
+            "of-joint": "rob:joint6",
+            "quantity-kind": "Angle",
+            "unit": "RAD",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qd6",
+            "@type": [ "JointReference", "JointVelocity", "JointVelocityCoordinate" ],
+            "of-joint": "rob:joint6",
+            "quantity-kind": "AngularVelocity",
+            "unit": "RAD-PER-SEC",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qdd6",
+            "@type": [ "JointReference", "JointAcceleration", "JointAccelerationCoordinate" ],
+            "of-joint": "rob:joint6",
+            "quantity-kind": "AngularAcceleration",
+            "unit": "RAD-PER-SEC2",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:tau6",
+            "@type": [ "JointReference", "JointForce", "JointForceCoordinate" ],
+            "of-joint": "rob:joint6",
+            "quantity-kind": "Torque",
+            "unit": "N-M",
+            "number-of-elements": 1,
+            "value": 0.0
+        },
+        {
+            "@id": "rob:q7",
+            "@type": [ "JointReference", "JointPosition", "JointPositionCoordinate" ],
+            "of-joint": "rob:joint7",
+            "quantity-kind": "Angle",
+            "unit": "RAD",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qd7",
+            "@type": [ "JointReference", "JointVelocity", "JointVelocityCoordinate" ],
+            "of-joint": "rob:joint7",
+            "quantity-kind": "AngularVelocity",
+            "unit": "RAD-PER-SEC",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:qdd7",
+            "@type": [ "JointReference", "JointAcceleration", "JointAccelerationCoordinate" ],
+            "of-joint": "rob:joint7",
+            "quantity-kind": "AngularAcceleration",
+            "unit": "RAD-PER-SEC2",
+            "value": 0.0
+        },
+        {
+            "@id": "rob:tau7",
+            "@type": [ "JointReference", "JointForce", "JointForceCoordinate" ],
+            "of-joint": "rob:joint7",
+            "quantity-kind": "Torque",
+            "unit": "N-M",
+            "number-of-elements": 1,
+            "value": 0.0
+        },
+
+        {
+            "@id": "rob:chain",
+            "@type": [ "KinematicChain", "SerialComposition" ],
+            "joints": [
+                "rob:joint1",
+                "rob:joint2",
+                "rob:joint3",
+                "rob:joint4",
+                "rob:joint5",
+                "rob:joint6",
+                "rob:joint7"
+            ]
+        }
+    ]
+}

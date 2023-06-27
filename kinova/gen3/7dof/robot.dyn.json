@@ -1,0 +1,196 @@
+{
+    "@context": [
+        "https://comp-rob2b.github.io/metamodels/newtonian-rigid-body-dynamics/structural-entities.json",
+        "https://comp-rob2b.github.io/metamodels/newtonian-rigid-body-dynamics/coordinates.json",
+        "https://comp-rob2b.github.io/metamodels/qudt.json",
+        {
+            "rob": "https://comp-rob2b.github.io/robots/kinova/gen3/7dof/"
+        }
+    ],
+    "@id": "rob:dynamics",
+    "@graph": [
+        {
+            "@id": "rob:link0-rbi-com",
+            "@type": "RigidBodyInertia",
+            "of": "rob:link0",
+            "about": "rob:link0-com",
+            "quantity-kind": [ "Mass", "LengthMass", "MomentOfInertia" ]
+        },
+        {
+            "@id": "rob:link0-rbi-com-coord",
+            "@type": [ "InertiaReference", "RigidBodyInertiaCoordinate", "MassScalar", "FirstMomentOfMassVectorXYZ", "MomentOfInertiaXYZ", "ProductOfInertiaXYZ" ],
+            "of-inertia": "rob:link0-rbi-com",
+            "unit": [ "KiloGM", "M-KiloGM", "KiloGM-M2" ],
+            "as-seen-by": "rob:link0-root",
+            "mass": 1.697,
+            "first-moment-of-mass": [ 0.0, 0.0, 0.0 ],
+            "ixx": 0.004622,
+            "ixy": 0.000009,
+            "ixz": 0.000060,
+            "iyy": 0.004495,
+            "iyz": 0.000009,
+            "izz": 0.002079
+        },
+
+        {
+            "@id": "rob:link1-rbi-com",
+            "@type": "RigidBodyInertia",
+            "of": "rob:link1",
+            "about": "rob:link1-com",
+            "quantity-kind": [ "Mass", "LengthMass", "MomentOfInertia" ]
+        },
+        {
+            "@id": "rob:link1-rbi-com-coord",
+            "@type": [ "InertiaReference", "RigidBodyInertiaCoordinate", "MassScalar", "FirstMomentOfMassVectorXYZ", "MomentOfInertiaXYZ", "ProductOfInertiaXYZ" ],
+            "of-inertia": "rob:link1-rbi-com",
+            "unit": [ "KiloGM", "M-KiloGM", "KiloGM-M2" ],
+            "as-seen-by": "rob:link1-root",
+            "mass": 1.377,
+            "first-moment-of-mass": [ 0.0, 0.0, 0.0 ],
+            "ixx": 0.004570,
+            "ixy": 0.000001,
+            "ixz": 0.000002,
+            "iyy": 0.004831,
+            "iyz": 0.000448,
+            "izz": 0.001409
+        },
+
+        {
+            "@id": "rob:link2-rbi-com",
+            "@type": "RigidBodyInertia",
+            "of": "rob:link2",
+            "about": "rob:link2-com",
+            "quantity-kind": [ "Mass", "LengthMass", "MomentOfInertia" ]
+        },
+        {
+            "@id": "rob:link2-rbi-com-coord",
+            "@type": [ "InertiaReference", "RigidBodyInertiaCoordinate", "MassScalar", "FirstMomentOfMassVectorXYZ", "MomentOfInertiaXYZ", "ProductOfInertiaXYZ" ],
+            "of-inertia": "rob:link2-rbi-com",
+            "unit": [ "KiloGM", "M-KiloGM", "KiloGM-M2" ],
+            "as-seen-by": "rob:link2-root",
+            "mass": 1.1636,
+            "first-moment-of-mass": [ 0.0, 0.0, 0.0 ],
+            "ixx":  0.011088,
+            "ixy":  0.000005,
+            "ixz":  0.000000,
+            "iyy":  0.001072,
+            "iyz": -0.000691,
+            "izz":  0.011255
+        },
+
+        {
+            "@id": "rob:link3-rbi-com",
+            "@type": "RigidBodyInertia",
+            "of": "rob:link3",
+            "about": "rob:link3-com",
+            "quantity-kind": [ "Mass", "LengthMass", "MomentOfInertia" ]
+        },
+        {
+            "@id": "rob:link3-rbi-com-coord",
+            "@type": [ "InertiaReference", "RigidBodyInertiaCoordinate", "MassScalar", "FirstMomentOfMassVectorXYZ", "MomentOfInertiaXYZ", "ProductOfInertiaXYZ" ],
+            "of-inertia": "rob:link3-rbi-com",
+            "unit": [ "KiloGM", "M-KiloGM", "KiloGM-M2" ],
+            "as-seen-by": "rob:link3-root",
+            "mass": 1.1636,
+            "first-moment-of-mass": [ 0.0, 0.0, 0.0 ],
+            "ixx":  0.010932,
+            "ixy":  0.000000,
+            "ixz": -0.000007,
+            "iyy":  0.011127,
+            "iyz":  0.000606,
+            "izz":  0.001043
+        },
+
+        {
+            "@id": "rob:link4-rbi-com",
+            "@type": "RigidBodyInertia",
+            "of": "rob:link4",
+            "about": "rob:link4-com",
+            "quantity-kind": [ "Mass", "LengthMass", "MomentOfInertia" ]
+        },
+        {
+            "@id": "rob:link4-rbi-com-coord",
+            "@type": [ "InertiaReference", "RigidBodyInertiaCoordinate", "MassScalar", "FirstMomentOfMassVectorXYZ", "MomentOfInertiaXYZ", "ProductOfInertiaXYZ" ],
+            "of-inertia": "rob:link4-rbi-com",
+            "unit": [ "KiloGM", "M-KiloGM", "KiloGM-M2" ],
+            "as-seen-by": "rob:link4-root",
+            "mass": 0.930,
+            "first-moment-of-mass": [ 0.0, 0.0, 0.0 ],
+            "ixx":  0.008147,
+            "ixy": -0.000001,
+            "ixz":  0.000000,
+            "iyy":  0.000631,
+            "iyz": -0.000500,
+            "izz":  0.008316
+        },
+
+        {
+            "@id": "rob:link5-rbi-com",
+            "@type": "RigidBodyInertia",
+            "of": "rob:link5",
+            "about": "rob:link5-com",
+            "quantity-kind": [ "Mass", "LengthMass", "MomentOfInertia" ]
+        },
+        {
+            "@id": "rob:link5-rbi-com-coord",
+            "@type": [ "InertiaReference", "RigidBodyInertiaCoordinate", "MassScalar", "FirstMomentOfMassVectorXYZ", "MomentOfInertiaXYZ", "ProductOfInertiaXYZ" ],
+            "of-inertia": "rob:link5-rbi-com",
+            "unit": [ "KiloGM", "M-KiloGM", "KiloGM-M2" ],
+            "as-seen-by": "rob:link5-root",
+            "mass": 0.678,
+            "first-moment-of-mass": [ 0.0, 0.0, 0.0 ],
+            "ixx": 0.001596,
+            "ixy": 0.000000,
+            "ixz": 0.000000,
+            "iyy": 0.001607,
+            "iyz": 0.000256,
+            "izz": 0.000399
+        },
+
+        {
+            "@id": "rob:link6-rbi-com",
+            "@type": "RigidBodyInertia",
+            "of": "rob:link6",
+            "about": "rob:link6-com",
+            "quantity-kind": [ "Mass", "LengthMass", "MomentOfInertia" ]
+        },
+        {
+            "@id": "rob:link6-rbi-com-coord",
+            "@type": [ "InertiaReference", "RigidBodyInertiaCoordinate", "MassScalar", "FirstMomentOfMassVectorXYZ", "MomentOfInertiaXYZ", "ProductOfInertiaXYZ" ],
+            "of-inertia": "rob:link6-rbi-com",
+            "unit": [ "KiloGM", "M-KiloGM", "KiloGM-M2" ],
+            "as-seen-by": "rob:link6-root",
+            "mass": 0.678,
+            "first-moment-of-mass": [ 0.0, 0.0, 0.0 ],
+            "ixx":  0.001641,
+            "ixy":  0.000000,
+            "ixz":  0.000000,
+            "iyy":  0.000410,
+            "iyz": -0.000278,
+            "izz":  0.001641
+        },
+
+        {
+            "@id": "rob:link7-rbi-com",
+            "@type": "RigidBodyInertia",
+            "of": "rob:link7",
+            "about": "rob:link7-com",
+            "quantity-kind": [ "Mass", "LengthMass", "MomentOfInertia" ]
+        },
+        {
+            "@id": "rob:link7-rbi-com-coord",
+            "@type": [ "InertiaReference", "RigidBodyInertiaCoordinate", "MassScalar", "FirstMomentOfMassVectorXYZ", "MomentOfInertiaXYZ", "ProductOfInertiaXYZ" ],
+            "of-inertia": "rob:link7-rbi-com",
+            "unit": [ "KiloGM", "M-KiloGM", "KiloGM-M2" ],
+            "as-seen-by": "rob:link7-root",
+            "mass": 0.500,
+            "first-moment-of-mass": [ 0.0, 0.0, 0.0 ],
+            "ixx": 0.000587,
+            "ixy": 0.000003,
+            "ixz": 0.000003,
+            "iyy": 0.000369,
+            "iyz": 0.000118,
+            "izz": 0.000609
+        }
+    ]
+}

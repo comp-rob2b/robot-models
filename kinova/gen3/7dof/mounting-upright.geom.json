@@ -1,0 +1,96 @@
+{
+    "@context": [
+        "https://comp-rob2b.github.io/metamodels/geometry/structural-entities.json",
+        "https://comp-rob2b.github.io/metamodels/geometry/coordinates.json",
+        "https://comp-rob2b.github.io/metamodels/geometry/spatial-relations.json",
+        "https://comp-rob2b.github.io/metamodels/qudt.json",
+        {
+            "rob": "https://comp-rob2b.github.io/robots/kinova/gen3/7dof/"
+        }
+    ],
+    "@id": "rob:geometry",
+    "@graph": [
+        {
+            "@id": "rob:world-origin",
+            "@type": [ "3D", "Euclidean", "Point" ]
+        },
+        {
+            "@id": "rob:world-frame",
+            "@type": [ "3D", "Frame", "Orthogonal", "UnitLength", "RightHanded" ],
+            "origin": "rob:world-origin"
+        },
+        {
+            "@id": "rob:world-body",
+            "@type": [ "SimplicialComplex", "RigidBody" ],
+            "simplices": [
+                "rob:world-origin",
+                "rob:world-frame"
+            ]
+        },
+
+        {
+            "@id": "rob:pose-link0-root-wrt-world-frame",
+            "@type": "Pose",
+            "of": "rob:link0-root",
+            "with-respect-to": "rob:world-frame",
+            "quantity-kind": [ "Angle", "Length" ]
+        },
+        {
+            "@id": "rob:pose-coord-link0-root-wrt-world-frame",
+            "@type": [ "PoseReference", "PoseCoordinate", "DirectionCosineXYZ", "VectorXYZ" ],
+            "of-pose": "rob:pose-link0-root-wrt-world-frame",
+            "as-seen-by": "rob:world-frame",
+            "unit": [ "UNITLESS", "M" ],
+            "direction-cosine-x": [ 1.0, 0.0, 0.0 ],
+            "direction-cosine-y": [ 0.0, 1.0, 0.0 ],
+            "direction-cosine-z": [ 0.0, 0.0, 1.0 ],
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+        },
+
+        {
+            "@id": "rob:velocity-link0-root-wrt-world-frame",
+            "@type": "Velocity",
+            "of": "rob:link0-root",
+            "with-respect-to": "rob:world-frame",
+            "quantity-kind": [ "AngularVelocity", "LinearVelocity" ]
+        },
+        {
+            "@id": "rob:velocity-twist-coord-link0-root-wrt-world-frame",
+            "@type": [
+                "VelocityReference",
+                "VelocityTwistCoordinate",
+                "AngularVelocityVectorXYZ",
+                "LinearVelocityVectorXYZ"
+            ],
+            "of-velocity": "rob:velocity-link0-root-wrt-world-frame",
+            "as-seen-by": "rob:world-frame",
+            "unit": [ "RAD-PER-SEC", "M-PER-SEC" ],
+            "angular-velocity": [ 0.0, 0.0, 0.0 ],
+            "linear-velocity": [ 0.0, 0.0, 0.0 ]
+        },
+
+        {
+            "@id": "rob:acceleration-link0-root-wrt-world-frame",
+            "@type": "Acceleration",
+            "of": "rob:link0-root",
+            "with-respect-to": "rob:world-frame",
+            "quantity-kind": [ "AngularAcceleration", "LinearAcceleration" ]
+        },
+        {
+            "@id": "rob:acceleration-twist-coord-link0-root-wrt-world-frame",
+            "@type": [
+                "AccelerationReference",
+                "AccelerationTwistCoordinate",
+                "AngularAccelerationVectorXYZ",
+                "LinearAccelerationVectorXYZ"
+            ],
+            "of-acceleration": "rob:acceleration-link0-root-wrt-world-frame",
+            "as-seen-by": "rob:world-frame",
+            "unit": [ "RAD-PER-SEC2", "M-PER-SEC2" ],
+            "angular-acceleration": [ 0.0, 0.0, 0.0 ],
+            "linear-acceleration": [ 0.0, 0.0, 9.81 ]
+        }
+    ]
+}
