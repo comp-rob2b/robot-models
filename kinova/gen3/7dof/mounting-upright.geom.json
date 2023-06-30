@@ -50,44 +50,46 @@
         },
 
         {
-            "@id": "rob:velocity-link0-root-wrt-world-frame",
+            "@id": "rob:velocity-link0-wrt-world-body",
             "@type": "Velocity",
-            "of": "rob:link0-root",
-            "with-respect-to": "rob:world-frame",
+            "of": "rob:link0",
+            "with-respect-to": "rob:world-body",
+            "reference-point": "rob:link0-root-origin",
             "quantity-kind": [ "AngularVelocity", "LinearVelocity" ]
         },
         {
-            "@id": "rob:velocity-twist-coord-link0-root-wrt-world-frame",
+            "@id": "rob:velocity-twist-coord-link0-wrt-world-body",
             "@type": [
                 "VelocityReference",
                 "VelocityTwistCoordinate",
                 "AngularVelocityVectorXYZ",
                 "LinearVelocityVectorXYZ"
             ],
-            "of-velocity": "rob:velocity-link0-root-wrt-world-frame",
-            "as-seen-by": "rob:world-frame",
+            "of-velocity": "rob:velocity-link0-wrt-world-body",
+            "as-seen-by": "rob:link0-root",
             "unit": [ "RAD-PER-SEC", "M-PER-SEC" ],
             "angular-velocity": [ 0.0, 0.0, 0.0 ],
             "linear-velocity": [ 0.0, 0.0, 0.0 ]
         },
 
         {
-            "@id": "rob:acceleration-link0-root-wrt-world-frame",
+            "@id": "rob:acceleration-link0-wrt-world-body",
             "@type": "Acceleration",
-            "of": "rob:link0-root",
-            "with-respect-to": "rob:world-frame",
+            "of": "rob:link0",
+            "with-respect-to": "rob:world-body",
+            "reference-point": "rob:link0-root-origin",
             "quantity-kind": [ "AngularAcceleration", "LinearAcceleration" ]
         },
         {
-            "@id": "rob:acceleration-twist-coord-link0-root-wrt-world-frame",
+            "@id": "rob:acceleration-twist-coord-link0-wrt-world-body",
             "@type": [
                 "AccelerationReference",
                 "AccelerationTwistCoordinate",
                 "AngularAccelerationVectorXYZ",
                 "LinearAccelerationVectorXYZ"
             ],
-            "of-acceleration": "rob:acceleration-link0-root-wrt-world-frame",
-            "as-seen-by": "rob:world-frame",
+            "of-acceleration": "rob:acceleration-link0-wrt-world-body",
+            "as-seen-by": "rob:link0-root",
             "unit": [ "RAD-PER-SEC2", "M-PER-SEC2" ],
             "angular-acceleration": [ 0.0, 0.0, 0.0 ],
             "linear-acceleration": [ 0.0, 0.0, 9.81 ]
